@@ -1,0 +1,56 @@
+.logo {
+    margin-right: 2;
+    font-family: monospace;
+    font-weight: 700;
+    letter-spacing: '.3rem';
+    color: white;
+    text-decoration: none;
+}
+
+.container{
+    flex-grow: 1;
+    display: flex;
+}
+
+.button {
+    margin-top: 2;
+    margin-bottom: 2;
+    color: white;
+    display: block;
+}
+
+.mobileContainer {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.mobileLogo {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-grow: 1;
+        display: none;
+    }
+    .mobileContainer{
+        flex-grow: 1;
+        display: flex;
+    }
+    .menu {
+        display: block;
+    }
+    .mobileLogo {
+        margin-right: 2;
+        display: flex;
+        flex-grow: 1;
+        font-family: monospace;
+        font-weight: 700;
+        letter-spacing: '.3rem';
+        color: white;
+        text-decoration: none;
+    }
+  }
