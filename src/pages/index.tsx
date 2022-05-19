@@ -1,6 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Text from '../components/atoms/Text';
 import styles from '../styles/Home.module.css'
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import { Typography } from '@mui/material';
+
 
 export default function Home() {
   return (
@@ -12,6 +19,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <Text variant='h1' component="h2">Test</Text>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
