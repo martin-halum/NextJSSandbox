@@ -1,6 +1,8 @@
 // next.config.js
 module.exports = {
     images: {
-        domains: ['a.espncdn.com', 'www.si.com'],
+        loader: 'akamai',
+        path: '',
+        domains: ["media.bleacherreport.com", "img.bleacherreport.net"],
     },
 }

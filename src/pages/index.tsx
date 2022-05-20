@@ -5,9 +5,12 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import HomePage from './HomePage';
+import { ApplicationProvider } from '../contexts/Application';
 
 export default function Home() {
   return (
-    <HomePage />
+    <ApplicationProvider>
+      <HomePage />
+    </ApplicationProvider>
   )
 }

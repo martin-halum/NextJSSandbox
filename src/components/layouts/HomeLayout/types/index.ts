@@ -1,3 +1,5 @@
 export type PropsType = {
-    articles?: Array<Object>;
+    [key: string]: any;
+    onClickNext: () => void;
+    onClickPrevious: () => void;
 };

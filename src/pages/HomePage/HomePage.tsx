@@ -1,25 +1,32 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useContext } from 'react';
 
-import getData from '../../api';
+import { ApplicationContext } from '../../contexts/Application';
+
 import HomeLayout from '../../components/layouts/HomeLayout';
 
-import type { PropsType } from './types';
-
-const HomePage = (props: PropsType) => {
-    const { } = props;
+const HomePage = () => {
+    const {
+        fetchArticles,
+        article,
+        isFetching,
+        setNextArticle,
+        setPrevArticle
+    } = useContext(ApplicationContext);
 
     React.useEffect(() => {
-        getData().then(function (response) {
-            const { data } = response;
-            const { articles } = data;
-            console.log(articles);
-        }).catch(function (error) {
-            console.log(error);
-        });
+        fetchArticles();
     }, []);
 
     return (
-        <HomeLayout />
+        <>
+            {!isFetching &&
+                <HomeLayout
+                    article={article}
+                    onClickNext={setNextArticle}
+                    onClickPrevious={setPrevArticle}
+                />}
+        </>
     );
 };
 

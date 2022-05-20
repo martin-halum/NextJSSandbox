@@ -1,13 +1,5 @@
-/**
- *
- * Application Context
- * @format
- * @flow
- *
- */
-
-import type {Node} from 'react';
+import { ReactNode } from "react";
 
 export type PropsType = {
-  children: Node;
+  children: ReactNode;
 };
