@@ -3,11 +3,13 @@ import renderer from 'react-test-renderer';
 
 import {{ properCase name }} from '../{{ properCase name }}';
 
-test('{{ properCase name }}', () => {
-  const tree = renderer
-    .create(
-      <{{ properCase name }} />
-    )
-    .toJSON();
-  expect(tree).toMatchSnapshot();
-});
+describe('{{ properCase name }} Test', ()=>{
+  test('{{ properCase name }}', () => {
+    const tree = renderer
+      .create(
+        <{{ properCase name }} />
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+})
