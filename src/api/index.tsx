@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const baseURL = "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=d079683cbb124abba5dae348b7f665db";
 
 const fetchData = async () => {
