@@ -7,6 +7,7 @@
  */
 
 import React, { useState } from 'react';
+import apiFactory from '../../api';
 import getData from '../../api';
 
 import type { PropsType } from './types';
@@ -33,8 +34,7 @@ function ApplicationProvider(props: PropsType): React.ReactElement {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const fetchArticles = () => {
-    getData().then(function (response) {
-      const { data } = response;
+    apiFactory.fetchData().then((data) => {
       const { articles } = data;
 
       setArticles(articles);
